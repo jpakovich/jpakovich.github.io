@@ -1,0 +1,107 @@
+<html> 
+
+	<script>
+    	function setHalfVolume() {
+        	var myAudio = document.getElementById("audio");
+        	myAudio.volume = 0.02;
+    	}
+
+	</script>
+	
+	<head>
+		<link typ="text/css" rel="stylesheet" href="main.css"/>
+		 <title> Anime Club </title>
+		 
+		 <script>
+			function banner(){ 
+				var text = confirm("Did You Really Want to Click on My Banner?"); 
+				return text; 
+			}
+
+			function answer(){ 
+				var radio = document.getElementsByName("trivia"); 
+				var selection = false; 
+				var text = ""; 
+
+				for( var i = 0; i < radio.length; i++) { 
+					if(radio[i].value == "right" && radio[i].checked == true) { 
+						selection = true; 
+					} //end if statement 
+					} //end for loop
+
+				if(selection == true) {
+					text = text + "<b><p style='color:#65ff00'>Way to go!</p></b>"; 
+				} else { 
+					text = text + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+				}
+				document.getElementById("response").innerHTML = text;
+
+				} //end function answer 
+		</script>
+
+	</head> 
+	
+	<body id="background">
+		<audio id="audio"  style="width:100%; height:25px;" src="Behind the Mask.mp3" controls autoplay loop onloadeddata="setHalfVolume()">
+		</audio>
+
+		<a href="https://www.google.com/"><header onclick="return banner()"> CLICK HERE TO GO TO GOOGLE
+			<nav>
+				<ul id="navmenu">
+					<center>
+						<li class="navitem"><a href="index.html">Home</a></li>
+						<li class="navitem"><a href="anime.html">Fall 2017 Anime</a> </li>
+						<li class="navitem"><a href="manga.html">Must read Mangas</a></li>
+					</center>
+				</ul>
+			</nav>
+		</header></a>
+			<hr>
+			<h1> Anime Watch List </h1>
+			<p class="paragraph"> 
+			<span class="wrap-text">	
+				This is where we put up all of the anime that is <b>required</b> to be watched if you are insterested in watching <i>anime</i>. These are all <u>classic anime</u> and they are generally not as weird as most people in anime culture make youthink anime is.
+			</span></p>
+			<ul>
+
+				<li class="listitem"><a href="http://www.crunchyroll.com/cowboy-bebop"><img height="160" width="100" src="Cowboy Bebop.jpg"></a><br>Cowboy Bebop</li>
+
+				<li class="listitem"><a href="http://www.crunchyroll.com/fullmetal-alchemist-brotherhood"><img height="160" width="100" src="FMAB.png"> </a> <br> FMA: Brotherhood</li>  
+
+				<li class="listitem"><a href="http://www.crunchyroll.com/Hunter-X-Hunter"> <img class="listimg" height="160" width="100" src="Hunter x Hunter.jpg"> </a> <br> Hunter X Hunter </li> 
+
+				<li class="listitem"><a href="http://kissanime.ru/Anime/Death-Note"> <img height="160" width="100" src="Death Note.jpg"></a><br>Death Note</li> 
+ 
+				<li class="listitem"><a href="http://www.crunchyroll.com/Soul-Eater"> <img height="160" width="100" src="Soul Eater.jpg"></a><br>Soul Eater</li>  
+
+			</ul>
+			
+			<hr>
+		<div id="rightside">
+			<p> Funny Clip From One Punch Man </p>
+			<video width="400" height="250" src="ok.mp4" type="video/mp4" controls>Funny Clip from One Punch Man</video>
+
+		</div>
+
+		<div id="leftside">
+			<h2> Test your Anime Knowledge: </h2>
+				<p class="paragraph">  Which of these 5 anime is the oldest? </p>
+				<form>
+					<div id="response"></div>
+					<input type="radio"  name="trivia" value="wrong">Cowboy Bebop <br>
+					<input type="radio"  name="trivia" value="wrong"> Fullmetal Alchemist: Brotherhood <br>
+					<input type="radio"  name="trivia" value="right"> Hunter x Hunter  <br>
+				    <input type="radio"  name="trivia" value="wrong"> Death Note <br>
+				    <input type="radio"  name="trivia" value="wrong"> Soul Eater <br><br>
+				    <input type="button" value="Click Here" id="button" onclick="answer()">	
+				</form>		
+			<hr>
+		</div>
+
+		<div id="clrfloat"></div>
+		<br>
+		<center style="color:white;">Jacob Pakovich <p style="color:white;">  <a href="http://kissanime.ru/">   A place to watch anime </p></center>
+	
+	</body>
+
+</html>
